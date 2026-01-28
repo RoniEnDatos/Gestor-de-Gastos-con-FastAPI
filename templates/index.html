@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gestor de Gastos</title>
+</head>
+<body>
+    <h1>Gestor de Gastos</h1>
+
+    <h3>Total: S/ {{ total }}</h3>
+
+    <ul>
+        {% for gasto in gastos %}
+            <li>{{ gasto.descripcion }} - {{ gasto.categoria }} - S/ {{ gasto.monto }}</li>
+        {% endfor %}
+    </ul>
+
+    <p>Los gastos se agregan vía API (POST /gastos)</p>
+</body>
+</html>
